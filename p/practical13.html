@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .main {
+            width: 100%;
+            height: 100px;
+            display: flex;
+            font-size: 45px;
+            color: rgb(26, 122, 101);
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgb(5, 30, 63);
+        }
+
+        .sec-1 {
+            display: flex;
+            flex-direction: row;
+            color: rgba(144, 209, 247, 0.842);
+            padding: 30px 10px;
+            justify-content: space-between;
+        }
+
+        .about {
+            width: 40%;
+
+        }
+
+        .sec-1 h2 {
+            color: rgb(224, 248, 156);
+            text-transform: uppercase;
+            font-size: 20px;
+            padding: 10px;
+        }
+
+        .about p {
+            text-align: justify;
+            line-height: 25px;
+
+
+        }
+
+        .sec-1 ul {
+            list-style-type: none;
+
+
+        }
+
+        .sec-1 ul li {
+            padding: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgba(144, 209, 247, 0.842);
+        }
+
+        a:hover {
+            color: rgb(252, 252, 182);
+        }
+
+        .sec-2 {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: rgba(144, 209, 247, 0.842);
+            font-size: 20px;
+            padding: 20px;
+
+
+
+        }
+
+        .sec-2 a {
+            display: inline-block;
+            background-color: rgb(167, 201, 16);
+            color: black;
+            padding: 10px 25px;
+            margin-left: 15px;
+            border-radius: 40%;
+            font-size: 20px;
+            margin: 10px;
+
+        }
+
+        .sec-2 a:hover {
+            background-color: rgb(252, 31, 31);
+        }
+
+        .sec-3 {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sec-3 ul {
+            list-style-type: none;
+            margin: 20px;
+
+        }
+
+        .sec-3 ul li {
+            display: inline-block;
+            height: 60px;
+            width: 60px;
+            background-color: rgba(255, 255, 255, 0.719);
+            /* background-color:rgb(5, 30, 63); */
+            border-radius: 50%;
+            padding: 20px;
+            margin-left: 20px;
+
+        }
+
+        .sec-3 ul li i {
+            color: white;
+            font-size: 24px;
+            line-height: 20px;
+            text-align: center;
+
+        }
+
+        .sec-3 ul li:nth-child(1):hover {
+            background-color: #3b5999;
+
+        }
+
+        .sec-3 ul li:nth-child(2):hover {
+            background-color: #55acee;
+
+        }
+
+        .sec-3 ul li:nth-child(3):hover {
+            background-color: #dd4b39;
+
+        }
+
+        .sec-3 ul li:nth-child(4):hover {
+            background-color: #e4405f;
+
+        }
+
+        .sec-4 {
+            display: flex;
+            background-color: rgb(2, 13, 27);
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .sec-4 p {
+            color: rgba(144, 209, 247, 0.842);
+            position: relative;
+
+        }
+
+        .sec-4 p::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            right: 0;
+            bottom: -10px;
+            background-color: yellow;
+            transition: all .3s;
+            display: block;
+
+        }
+
+        .sec-4 p:hover::after {
+            width: 100%;
+
+        }
+
+        hr {
+            opacity: 0.2;
+        }
+
+        @media (max-width:760px) {
+            .main {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                font-size: 45px;
+                color: rgb(26, 122, 101);
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer {
+                width: 100%;
+                background-color: rgb(5, 30, 63);
+            }
+
+            .sec-1 {
+                display: flex;
+                flex-direction: row;
+                color: rgba(144, 209, 247, 0.842);
+                padding: 30px 10px;
+                justify-content: space-between;
+                flex-wrap: wrap;
+            }
+
+            .about {
+                width: 100%;
+                margin-bottom: 20px;
+
+            }
+
+            .sec-1 h2 {
+                color: rgb(224, 248, 156);
+                text-transform: uppercase;
+                font-size: 20px;
+                padding: 10px;
+            }
+
+            .about p {
+                text-align: justify;
+                line-height: 25px;
+
+
+            }
+
+            .sec-1 ul {
+                list-style-type: none;
+
+
+            }
+
+            .sec-1 ul li {
+                padding: 5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgba(144, 209, 247, 0.842);
+            }
+
+            a:hover {
+                color: yellow;
+            }
+
+            .sec-2 {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                color: rgba(144, 209, 247, 0.842);
+                font-size: 20px;
+                padding: 20px;
+
+
+
+            }
+
+            .sec-2 a {
+                display: inline-block;
+                background-color: rgb(167, 201, 16);
+                color: black;
+                padding: 10px 25px;
+                margin-left: 15px;
+                border-radius: 40%;
+                font-size: 20px;
+                margin: 10px;
+
+            }
+
+            .sec-2 a:hover {
+                background-color: rgb(252, 31, 31);
+            }
+
+            .sec-3 {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .sec-3 ul {
+                list-style-type: none;
+                margin: 20px;
+
+            }
+
+            .sec-3 ul li {
+                display: inline-block;
+                height: 60px;
+                width: 60px;
+                background-color: rgba(255, 255, 255, 0.719);
+                /* background-color:rgb(5, 30, 63); */
+                border-radius: 50%;
+                padding: 10px;
+                margin-left: 20px;
+
+            }
+
+            .sec-3 ul li i {
+                color: white;
+                font-size: 24px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            .sec-3 ul li:nth-child(1):hover {
+                background-color: #3b5999;
+
+            }
+
+            .sec-3 ul li:nth-child(2):hover {
+                background-color: #55acee;
+
+            }
+
+            .sec-3 ul li:nth-child(3):hover {
+                background-color: #dd4b39;
+
+            }
+
+            .sec-3 ul li:nth-child(4):hover {
+                background-color: #e4405f;
+
+            }
+
+            .sec-4 {
+                display: flex;
+                background-color: rgb(2, 13, 27);
+                justify-content: center;
+                padding: 30px;
+            }
+
+            .sec-4 p {
+                color: rgba(144, 209, 247, 0.842);
+                position: relative;
+
+            }
+
+            .sec-4 p::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                right: 0;
+                bottom: -10px;
+                background-color: yellow;
+                transition: all .3s;
+                display: block;
+
+            }
+
+            .sec-4 p:hover::after {
+                width: 100%;
+
+            }
+
+            hr {
+                opacity: 0.2;
+            }
+        }
+
+        @media(max-width:500px) {
+            .main {
+                width: 100%;
+                height: 100px;
+                display: flex;
+                font-size: 45px;
+                color: rgb(26, 122, 101);
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer {
+                width: 100%;
+                background-color: rgb(5, 30, 63);
+            }
+
+            .sec-1 {
+                display: flex;
+                flex-direction: column;
+                color: rgba(144, 209, 247, 0.842);
+                padding: 30px 10px;
+                justify-content: space-between;
+            }
+
+            .about {
+                width: 100%;
+
+            }
+
+            .sec-1 h2 {
+                color: rgb(224, 248, 156);
+                text-transform: uppercase;
+                font-size: 20px;
+                padding: 10px;
+                margin-top: 20px;
+            }
+
+            .about p {
+                text-align: justify;
+                line-height: 25px;
+
+
+            }
+
+            .sec-1 ul {
+                list-style-type: none;
+
+
+            }
+
+            .sec-1 ul li {
+                padding: 5px;
+            }
+
+            a {
+                text-decoration: none;
+                color: rgba(144, 209, 247, 0.842);
+            }
+
+            a:hover {
+                color: yellow;
+            }
+
+            .sec-2 {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                align-items: center;
+                color: rgba(144, 209, 247, 0.842);
+                font-size: 20px;
+                padding: 20px;
+
+
+
+            }
+
+            .sec-2 a {
+                display: inline-block;
+                background-color: rgb(167, 201, 16);
+                color: black;
+                padding: 10px 25px;
+                margin-left: 15px;
+                border-radius: 40%;
+                font-size: 20px;
+                margin: 10px;
+
+            }
+
+            .sec-2 a:hover {
+                background-color: rgb(252, 31, 31);
+            }
+
+            .sec-3 {
+                display: flex;
+                justify-content: center;
+                padding: 20px;
+            }
+
+            .sec-3 ul {
+                list-style-type: none;
+                margin: 20px;
+
+            }
+
+            .sec-3 ul li {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255, 255, 255, 0.719);
+                /* background-color:rgb(5, 30, 63); */
+                border-radius: 50%;
+                padding: 10px;
+                margin-left: 10px;
+
+            }
+
+            .sec-3 ul li i {
+                color: white;
+                font-size: 24px;
+                line-height: 20px;
+                text-align: center;
+            }
+
+            .sec-3 ul li:nth-child(1):hover {
+                background-color: #3b5999;
+
+            }
+
+            .sec-3 ul li:nth-child(2):hover {
+                background-color: #55acee;
+
+            }
+
+            .sec-3 ul li:nth-child(3):hover {
+                background-color: #dd4b39;
+
+            }
+
+            .sec-3 ul li:nth-child(4):hover {
+                background-color: #e4405f;
+
+            }
+
+            .sec-4 {
+                display: flex;
+                background-color: rgb(2, 13, 27);
+                justify-content: center;
+                padding: 30px;
+            }
+
+            .sec-4 p {
+                color: rgba(144, 209, 247, 0.842);
+                position: relative;
+
+            }
+
+            .sec-4 p::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                right: 0;
+                bottom: -10px;
+                background-color: yellow;
+                transition: all .3s;
+                display: block;
+
+            }
+
+            .sec-4 p:hover::after {
+                width: 100%;
+
+            }
+
+            hr {
+                opacity: 0.2;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <section class="main">
+        Content Area
+    </section>
+    <footer>
+        <section class="sec-1">
+            <section class="about">
+                <h2>
+                    About
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae numquam ducimus consequuntur!
+                    Consequuntur expedita hic nam non facere alias, nemo suscipit ad similique itaque? Architecto
+                    excepturi placeat a quibusdam, harum tenetur nostrum sit consequatur autem eaque! Dignissimos
+                    numquam fugit iure, distinctio dolores minus! Asperiores, doloremque quo! Fugiat nobis dolor culpa
+                    maiores dignissimos vel eum consequatur laudantium asperiores quibusdam. Laudantium, eos dolorum
+                    nobis error praesentium veritatis illo ipsa laboriosam asperiores, tempora eaque aspernatur quis
+                    nisi alias officiis eveniet. Doloribus ullam soluta molestiae quod ratione aliquam suscipit expedita
+                    similique eveniet laboriosam, ipsam quo, animi, provident ab? Quos praesentium quae ratione ab quam?
+                </p>
+            </section>
+            <section class="link1">
+                <h2>
+                    Categories
+                </h2>
+                <ul>
+                    <li><a href="">C</a></li>
+                    <li><a href="">Design</a></li>
+                    <li><a href="">PHP</a></li>
+                    <li><a href="">Java</a></li>
+                    <li><a href="">Android</a></li>
+                    <li><a href="">Apps</a></li>
+
+
+                </ul>
+            </section>
+            <section class="link2">
+                <h2>
+                    Quick Links
+                </h2>
+                <ul>
+                    <li><a href="">About Us</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Contibute</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Sitemap</a></li>
+                    <li><a href="">Disclaimer</a></li>
+                </ul>
+            </section>
+
+
+            <section class="link3">
+                <h2>
+                    Contacts
+                </h2>
+                <ul>
+                    <li><i class='fa fa-home'></i><span>Visco-90,Mathura,India</span></li>
+                    <li><i class='fa fa-envelope'></i><span>betalabsindia@gmail.com</span></li>
+                    <li><i class='fa fa-mobile'></i><span>Mobile: 9784561232</span></li>
+                    <li><i class='fa fa-facebook-official'></i><a href="#">betalabsindia</a></li>
+                    
+
+                    <!-- <li><a href="#">Visco-90,Mathura,India</a></li>
+                    <li><a href="#">betalabsindia@gmail.com</a></li>
+                    <li><a href="#">Mobile: 9784561232</a></li>
+                    <li><a href="#">betalabsindia</a></li> -->
+
+                </ul>
+            </section>
+
+        </section>
+        <hr width"100%" noshade />
+        <section class-"sec-2">
+            <p>Register for free</p>
+            <a href="#">Sign up</a>
+
+        </section>
+
+
+        <hr width"100%" noshade />
+        <section class="sec-3">
+            <ul>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google"></i></a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+        </section>
+        <hr width="100%" noshade>
+        <section class="sec-4">
+            <p>
+                copyright &copy; 2020 All Rights Resrved By
+                <a href="https://www.beta-labs.in">Beta-Labs</a>
+            </p>
+        </section>
+
+
+    </footer>
+</body>
+
+</html>
